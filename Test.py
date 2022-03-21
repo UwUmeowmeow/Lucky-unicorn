@@ -1,4 +1,4 @@
-# Ask the user if they have played brfore
+# Ask the user if they have played before
 show_instructions = input("Have you played this game before?:")
 
 # if they say yes, 'out put Continues'
@@ -14,5 +14,7 @@ elif show_instructions == "no":
 # Otherwise - show error
 else:
     print("please enter 'yes' or 'no'")
+
+
 
 
