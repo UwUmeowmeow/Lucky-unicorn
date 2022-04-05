@@ -1,5 +1,5 @@
-"""took function from component 03_v1 as the basis for this new function which incorporates both yes/no and show instructions
-"""
+"""LU base component
+Components added after they have been created and Tested"""
 
 
 # Yes/no checking function
@@ -30,8 +30,24 @@ def instructions():
     print()
     print("The rules of the game will go here")
     print()
-    print("Program continues")
-    print()
+
+
+
+def num_check(question, low, high):
+    error = "That was not valid input\n" \
+            "Please enter a number between {} and {}\n".format(low, high)
+
+    while True:
+        try:
+            response = int(input(question))
+
+            if low <= response <= high:
+                return response
+            else:
+                print(error)
+
+        except ValueError:
+            print(error)
 
 
 # Main routine go here...
@@ -39,5 +55,7 @@ plated_before = yes_no("Have you played this game before? ")
 
 if plated_before == "No":
     instructions()
-else:
-    print("Program continues")
+
+# Ask the number how much to play with
+user_balance = num_check("How much would you like to play with?$", 1, 10)
+print(f"You are playing with ${user_balance}")

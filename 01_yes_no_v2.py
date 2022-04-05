@@ -23,3 +23,4 @@ while show_instructions != "x":
         print("please enter 'yes' or 'no'")
 
     print(f"You entered '{show_instructions}'")
+    print("You entered {}".format(show_instructions))
